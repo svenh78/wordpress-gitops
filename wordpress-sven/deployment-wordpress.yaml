@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: wordpress-sven
+  name: wordpress-sven
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: wordpress-sven
+  template:
+    metadata:
+      labels:
+        app: wordpress-sven
+    spec:
+      containers:
+      - image: ghcr.io/svenh78/wordpress-sven:main-3bdecd9
+        name: wordpress-sven
+        env:
+        - name: WORDPRESS_DB_HOST
+          value: "wordpress-mysql"
+        - name: WORDPRESS_DB_USER
+          value: "wp"
+        - name: WORDPRESS_DB_PASSWORD
+          value: "wp12345"
+        - name: WORDPRESS_DB_NAME
+          value: "wordpress"
