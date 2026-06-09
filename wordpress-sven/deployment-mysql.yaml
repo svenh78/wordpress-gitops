@@ -18,8 +18,8 @@ spec:
       - image: mysql:latest
         name: wordpress-mysql
         env:
-        - name: MYSQL_RANDOM_ROOT_PASSWORD
-          value: "yes"
+        - name: MYSQL_ROOT_PASSWORD
+          value: "rootpw"
         - name: MYSQL_USER
           value: "wp"
         - name: MYSQL_PASSWORD
