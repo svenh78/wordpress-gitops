@@ -22,7 +22,7 @@ spec:
           value: "yes"
         - name: MYSQL_USER
           value: "wp"
-        - name: MYSQL_RANDOM_ROOT_PASSWORD
+        - name: MYSQL_PASSWORD
           value: "wp12345"
         - name: MYSQL_DATABASE
           value: "wordpress"
